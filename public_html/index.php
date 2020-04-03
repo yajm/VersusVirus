@@ -17,7 +17,7 @@
   <br>
   <br>
   <div>
-    <input class="textfield" type="password" name="password" id="password" value="">
+    <input class="textfield" type="password" name="password" id="password" value="" placeholder="Passwort">
   </div>
   <br>
   <br>
