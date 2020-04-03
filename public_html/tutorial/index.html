@@ -12,23 +12,26 @@
 </style>
 
 <body>
-
+<div class="parent">
 <div class="corona">
 <img src="../call/assets/images/corona.png" alt="" width="128px">
 </div>
+<div class="pageCenter" style="background-color:#FFFFFFE0; height = 80%">
+  <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
+    <h1>Anleitung</h1>
+    
+           <iframe width="420" height="315"
+            src="https://www.youtube.com/watch?v=ZezntM6IAvU">
+            </iframe> 
 
-<h1>Anleitung</h1>
 
-       <iframe width="420" height="315"
-        src="https://www.youtube.com/watch?v=ZezntM6IAvU">
-        </iframe> 
+      <div>
+    <button class="button" onclick="onSubmit()">Next Step</button>
+        </div>
+  </div>
+</div>
 
-
-  <div>
-<button class="button" onclick="onSubmit()">Next Step</button>
-    </div>
-  
-
+</div>
 
 <script>
 $.ajaxSetup({
@@ -39,7 +42,7 @@ $.ajaxSetup({
 
 
 function onSubmit() {             
-  window.location = "../data"                  
+  window.location = "../data/"                  
 }
 
 </script>
