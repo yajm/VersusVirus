@@ -34,12 +34,12 @@ if(isset($_POST['submit'])){
 	<head>
 		<title>Call Doctor</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="../game/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="../call/assets/css/style.css">
 	</head>
 	<body>
 		<div class="parent">
 			<div class="corona">
-<img src="../game/assets/images/corona.png" alt="" width="128px">
+<img src="../call/assets/images/corona.png" alt="" width="128px">
 </div>
 <div class="contactCenter">
 	<div>
