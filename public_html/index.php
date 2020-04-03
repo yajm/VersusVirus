@@ -61,7 +61,7 @@ $.getJSON("api/?action=get_name",
 function onSubmit() {
   var name = document.getElementById("password").value
   var room = document.getElementById("email").value               
-  window.location = "call?id="+room                  
+  window.location = "tutorial"                
 }
 
 </script>

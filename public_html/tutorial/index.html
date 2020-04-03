@@ -11,7 +11,6 @@
   }
 </style>
 
-
 <body>
 <div class="parent">
 <div class="corona">
@@ -21,10 +20,31 @@
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
     <h1>Anleitung</h1>
     
-    Bei weitern Fragen könnt ihr auch direkt bei uns nach hilfe Fragen: <a style="color:blue" href="../contact">Kontaktformular</a>
+           <iframe width="420" height="315"
+            src="https://www.youtube.com/watch?v=ZezntM6IAvU">
+            </iframe> 
+
+
+      <div>
+    <button class="button" onclick="onSubmit()">Next Step</button>
+        </div>
   </div>
 </div>
 
 </div>
+
+<script>
+$.ajaxSetup({
+    xhrFields: {
+      withCredentials: true
+    }
+  });
+
+
+function onSubmit() {             
+  window.location = "../data"                  
+}
+
+</script>
 </body>
 </html>
