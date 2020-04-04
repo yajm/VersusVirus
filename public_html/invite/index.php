@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST['submit'])){
+	header('Location: /invite/page0.php?code='. $_GET["code"]);
+}
+?>
+
 <html>
 <head>
    <title>Call Doctor</title>
@@ -11,7 +17,6 @@
   }
 </style>
 
-
 <body>
 <div class="parent">
 <div class="corona">
@@ -19,16 +24,20 @@
 </div>
 <div class="pageCenter" style="background-color:#FFFFFFE0; height = 80%">
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
-    <h1>Anleitung</h1>
-
-    Bist du nicht sicher ob du Corona hast?
-    <br>
-    Kontaktiere die Hotline 058 463 00 00 um einen Invite-Code zu erhalten.
-    <br>
-    Bei weitern Fragen könnt ihr auch direkt bei uns nach hilfe Fragen: <a style="color:blue" href="../contact">Kontaktformular</a>
+    <h1>Call a Doctor</h1>
+    	<form method="post" action="#">
+		
+		<br>
+		<br>
+		Willkommen, wir machen nun ein paar Messungen.
+		<br>
+		<br>
+		<button class="button" type="submit" name="submit">Senden</button>
+	</form>
   </div>
 </div>
 
 </div>
 </body>
 </html>
+
