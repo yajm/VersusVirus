@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url("webfonts/Cera_GR_Black/stylesheet.css");
+@import url("webfonts/Cera_GR_Bold/stylesheet.css");
+@import url("webfonts/Cera_GR_Medium/stylesheet.css");
+
+h1{
+    font-size: 50px;
+    color: #6C6C6C;
+    line-height: 20px;
+    font-family: arial;
+  
+   
+}
+
+h2{
+    font-size: 27px;
+  text-align: right;
+  padding-top: 15px;
+  padding-right: 50px; 
+    font-family: "";
+  color: #FFFFFF
+  
+}
+
+p{
+    font-size: 22px;
+    font-family: "Cera GR";
+  color: #6C6C6C;
+  
+  
+  
+}
+
+
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr ;
+    grid-template-rows: 5fr 1fr ;
+    grid-template-areas:
+        "lefttab    main      righttab"
+    "footerleft     footermid    footerright "
+     ;
+
+    height: 100vh;
+    margin: 0;
+}
+
+
+main {
+    grid-area: main;
+    background: #FCFCFC;
+  text-align: center;
+}
+
+section.header1 {
+    grid-area: header1;
+    background-color: aqua;
+}
+
+section.headermid {
+    grid-area: headermid;
+    background-color: burlywood;
+}
+
+
+section.header2 {
+    grid-area: header2;
+    background: #14225D;
+}
+
+
+section.righttab {
+    grid-area: righttab;
+    background-color: green;
+  
+}
+
+section.lefttab {
+    grid-area: lefttab;
+    background-color: lightcoral;
+  
+}
+
+section.footerleft {
+    grid-area: footerleft;
+    background-color: lightblue;
+  
+}
+
+section.footermid {
+    grid-area: footermid;
+    background-color: lightgreen;
+  
+}
+
+section.footerright {
+    grid-area: footerright;
+    background-color: lightgray;
+  
+}
+
+.rectangle {
+    height: 60px;
+    width: 355px;
+    background-color:#14225D;
+  stroke-width:3;
+  stroke:rgb(0,0,0);
+  text-align: center;   
+  display: inline-block;
+  
+}
+
+.textwrapper
+{
+  border:1px solid #999999;
+  margin:5px 0;
+  padding:3px;
+}
+
+
+.grid-container main h1 {
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  width: 256px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.scondarybutton {
+  background-color: #4C50AF; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  width: 256px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}

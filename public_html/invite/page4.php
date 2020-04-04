@@ -3,7 +3,7 @@ if(isset($_POST['submit'])){
 	include '../../engine/connection.php';
   	$data = $_POST['data'];
   	$code = $_GET["code"];
-  	$sql = mysqli_query($conn, "UPDATE patient SET temperature = '$data' WHERE invitelink='$code'");
+  	$sql = mysqli_query($conn, "UPDATE patient SET temperature = '$data', data_complete='1', assistant_check='1' WHERE invitelink='$code'");
 
 	header('Location: /call/?code='. $code);
 }
