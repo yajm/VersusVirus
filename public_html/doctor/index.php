@@ -1,27 +1,62 @@
 <?php
 function currentCode() {
 	include '../../engine/connection.php';
-				$sql = mysqli_query($conn, "SELECT i.code FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = 1 AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
+				$doctor_id = $_GET["id"];
+				$sql = mysqli_query($conn, "SELECT i.code FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
 				$row = $sql->fetch_assoc();
 				return $row['code'];
 }
 
 if(isset($_POST['submit1'])){
 	include '../../engine/connection.php';
+	$doctor_id = $_GET["id"];
   	$data = $_POST['textarea'];
   	$code = currentCode();
   	$sql = mysqli_query($conn, "UPDATE patient SET doctor_notes = '$data', status='1' WHERE invitelink='$code'");
 
-	header('Location: /doctor');
+
+
+  	$sql = mysqli_query($conn, "SELECT name, email FROM patient WHERE invitelink='$code'");
+  	$row = $sql->fetch_assoc();
+
+  	$name = $row['name'];
+  	$to = $row['email'];
+
+  	$from = "info@consultnow.ch";
+    $subject = "Weitere Informationen - ConsultNow";
+	$message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Ihr Arzt empfiehlt Ihnen ein Spital aufzusuchen. Bitte halten Sie sich an allfällige Weisungen des Arztes und der Gesundheitskommission. <br><br>Wir wünschen Ihnen beste Gesundheit.<br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>
+Ihr ConsultNow Team</body></html>";
+    $headers = "From: $from\r\n";
+    $headers .= "Content-type: text/html\r\n";
+    mail($to,$subject,$message,$headers);
+
+
+	header('Location: /doctor/?id=' . $doctor_id);
 }
 
 if(isset($_POST['submit2'])){
 	include '../../engine/connection.php';
+	$doctor_id = $_GET["id"];
   	$data = $_POST['textarea'];
   	$code = currentCode();
   	$sql = mysqli_query($conn, "UPDATE patient SET doctor_notes = '$data', status='2' WHERE invitelink='$code'");
 
-	header('Location: /doctor');
+  	$sql = mysqli_query($conn, "SELECT name, email FROM patient WHERE invitelink='$code'");
+  	$row = $sql->fetch_assoc();
+
+  	$name = $row['name'];
+  	$to = $row['email'];
+  	
+  	$from = "info@consultnow.ch";
+    $subject = "Weitere Informationen - ConsultNow";
+  	$message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Ihr Arzt empfiehlt Ihnen <b>NICHT</b> ein Spital aufzusuchen. Bitte halten Sie sich an allfällige Weisungen des Arztes und der Gesundheitskommission. <br><br>Wir wünschen Ihnen beste Gesundheit.<br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>
+Ihr ConsultNow Team</body></html>";
+    $headers = "From: $from\r\n";
+    $headers .= "Content-type: text/html\r\n";
+    mail($to,$subject,$message,$headers);
+
+
+	header('Location: /doctor/?id=' . $doctor_id);
 }
 ?>
 
@@ -46,7 +81,8 @@ if(isset($_POST['submit2'])){
 			<h3>Aktueller Videochat</h3>
 			 <?php
 				include '../../engine/connection.php';
-				$sql = mysqli_query($conn, "SELECT name FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = 1 AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 20");
+				$doctor_id = $_GET["id"];
+				$sql = mysqli_query($conn, "SELECT name FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 20");
 				if ($row = $sql->fetch_assoc()) {
 					echo "<b>" . $row['name'] . "</b><br><br>";
 				}
@@ -64,7 +100,8 @@ if(isset($_POST['submit2'])){
 			<h3>Messdaten</h3>
 			 <?php
 				include '../../engine/connection.php';
-				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = 1 AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
+				$doctor_id = $_GET["id"];
+				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
 				$row = $sql->fetch_assoc();
 				echo "<b>" . $row['name'] . "</b><br><br>";
 				echo "Alter: " . $row['age'] . " Jahre<br>";
@@ -80,7 +117,8 @@ if(isset($_POST['submit2'])){
 			<h3>Hotline Notizen</h3>
 			<?php
 				include '../../engine/connection.php';
-				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = 1 AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
+				$doctor_id = $_GET["id"];
+				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
 				$row = $sql->fetch_assoc();
 				echo $row['helpline_notes'] ;
 			?> 
@@ -98,7 +136,8 @@ if(isset($_POST['submit2'])){
 			<h3>Hotline Notizen</h3>
 			<?php
 				include '../../engine/connection.php';
-				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = 1 AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
+				$doctor_id = $_GET["id"];
+				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
 				$row = $sql->fetch_assoc();
 				echo $row['assistant_notes'] ;
 			?> 

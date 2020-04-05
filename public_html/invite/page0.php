@@ -3,10 +3,19 @@ if(isset($_POST['submit'])){
 	include '../../engine/connection.php';
   	$data = $_POST['data'];
     $data2 = $_POST['data2'];
+    $data3 = $_POST['data3'];
   	$code = $_GET["code"];
-  	$sql = mysqli_query($conn, "UPDATE patient SET age = '$data', weight = '$data2' WHERE invitelink='$code'");
+  	$sql = mysqli_query($conn, "UPDATE patient SET name = '$data3', age = '$data', weight = '$data2' WHERE invitelink='$code'");
 
 	header('Location: /invite/page1.php?code='. $code);
+}
+
+function getName() {
+  include '../../engine/connection.php';
+  $code = $_GET["code"];
+  $sql = mysqli_query($conn, "SELECT name FROM patient WHERE invitelink='$code'");
+  $row = $sql->fetch_assoc();
+  return $row['name'];
 }
 ?>
 
@@ -33,6 +42,9 @@ if(isset($_POST['submit'])){
     <h1>Alter / Gewicht</h1>
     	<form method="post" action="#">
 		 <br>
+    <br>
+    <input class="textfieldlong" type="text" name="data3" id="data3" value="<?php echo getName();?>" placeholder="Name" />
+    <br>
     <br>
     <input class="textfieldlong" type="text" name="data" id="data" value="" placeholder="Alter" />
 		<br>
