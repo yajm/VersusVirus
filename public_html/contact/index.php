@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     $messageErr = "Message is required";
   }
   if (!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["textarea"])) {
-    $to = "info@calldoctor.ch"; // this is your Email address
+    $to = "info@consultnow.ch"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
     $subject = "Contact - Submission";
