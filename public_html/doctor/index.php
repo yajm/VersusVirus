@@ -77,10 +77,11 @@ if(isset($_POST['submit2'])){
 		
 		<section class="lefttab">
 
-		<div style="padding-left: 10px;">
 
 
 			<h3>Aktueller Videochat</h3>
+			
+		<div style="padding-left: 10px;">
 			
 			<?php
 				include '../../engine/connection.php';
@@ -127,8 +128,12 @@ if(isset($_POST['submit2'])){
 			
 		</section>
 		
-		<section class="footerleft">
-			<h3>Hotline Notizen</h3>
+		<section class="footerleft ">
+
+		
+
+		<h3>Hotline Notizen</h3>
+		<div style="padding-left: 10px; ">
 			<?php
 				include '../../engine/connection.php';
 				$doctor_id = $_GET["id"];
@@ -136,6 +141,8 @@ if(isset($_POST['submit2'])){
 				$row = $sql->fetch_assoc();
 				echo $row['helpline_notes'] ;
 			?> 
+		</div>
+			
 		</section>
 		
 		<section class = "footermid">
@@ -147,7 +154,11 @@ if(isset($_POST['submit2'])){
 		</section>
 	
 		<section class = "footerright"><br>
-			<h3>Hotline Notizen</h3>
+
+		
+
+			<h3>Assistent Notizen</h3>
+			<div style="padding-left: 20px; ">
 			<?php
 				include '../../engine/connection.php';
 				$doctor_id = $_GET["id"];
@@ -155,11 +166,11 @@ if(isset($_POST['submit2'])){
 				$row = $sql->fetch_assoc();
 				echo $row['assistant_notes'] ;
 			?> 
+
+		</div>
+			
 		</section>
 		
 	</div>
-	
-	
-	
 </body>
 </html>

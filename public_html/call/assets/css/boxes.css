@@ -31,7 +31,6 @@ h3{
   color: rgb(255, 255, 255);
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  padding-left: 10px;
 
  
 }
@@ -46,7 +45,7 @@ p{
 
 
 b{
-  font-size: 22px;
+  font-size: 24px;
 
   color: white;
 
@@ -149,7 +148,7 @@ section.footerright {
 .textwrapper
 {
   border:1px solid #999999;
-  margin:5px 0;
+  margin:0px 0;
   padding:3px;
 }
 
