@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     	<form method="post" action="#">
     	<br>
 		<br>
-		Bitte messen sie ihre Körpertemperatur mit einem Termometer.<br>
+		Bitte messen sie ihre Körpertemperatur mit einem Thermometer.<br>
 		Falls Sie die Messungen nicht machen können, bitte einfach Felder leer lassen und senden klicken.
 		<br>
 		<br>

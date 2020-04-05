@@ -59,10 +59,10 @@ Ihr ConsultNow Team</body></html>";
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
     <h1>Demo - For Patient</h1>
     	<form method="post" action="#">
-		<input class="textfieldlong" type="text" name="name" id="name" value="" placeholder="Name" />
+		<input class="textfield" type="text" name="name" id="name" value="" placeholder="Name" />
 		<br>
 		<br>
-		<input class="textfieldlong" type="text" name="email" id="email" value="" placeholder="E-Mail" />
+		<input class="textfield" type="text" name="email" id="email" value="" placeholder="E-Mail" />
 		<span class="error"> <?php echo $emailErr;?></span>
 		<br>
 		<br>

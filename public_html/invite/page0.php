@@ -37,13 +37,13 @@ function getName() {
     	<form method="post" action="#">
 		 <br>
     <br>
-    <input class="textfieldlong" type="text" name="data3" id="data3" value="<?php echo getName();?>" placeholder="Name" />
+    <input class="textfield" type="text" name="data3" id="data3" value="<?php echo getName();?>" placeholder="Name" />
     <br>
     <br>
-    <input class="textfieldlong" type="text" name="data" id="data" value="" placeholder="Alter" />
+    <input class="textfield" type="text" name="data" id="data" value="" placeholder="Alter" />
 		<br>
 		<br>
-		<input class="textfieldlong" type="text" name="data2" id="data2" value="" placeholder="Gewicht" />
+		<input class="textfield" type="text" name="data2" id="data2" value="" placeholder="Gewicht" />
 		<br>
 		<br>
 		<button class="button" type="submit" name="submit">Senden</button>

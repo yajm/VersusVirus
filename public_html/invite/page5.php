@@ -35,7 +35,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 		 Falls Sie die Messungen nicht machen können, bitte einfach Felder leer lassen und senden klicken.
 		<br>
 		<br>
-    <input class="textfield" type="text" name="data" id="data" value="" placeholder="Unterer Blutdruck" />
+    <input class="textfield" type="text" name="data" id="data" value="" placeholder="Pulsmessung" />
 		<br>
 		<br>
 		<button class="button" type="submit" name="submit">Senden</button>
