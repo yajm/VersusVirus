@@ -1,30 +1,57 @@
 @charset "UTF-8";
+@import url("webfonts/Cera_GR_Black/stylesheet.css");
+@import url("webfonts/Cera_GR_Bold/stylesheet.css");
+@import url("webfonts/Cera_GR_Medium/stylesheet.css");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 
 h1{
     font-size: 50px;
     color: #6C6C6C;
     line-height: 20px;
-    font-family: arial;
+    font-family: 'Open Sans', sans-serif;
   
    
 }
 
+
 h2{
-    font-size: 27px;
+  font-size: 27px;
   text-align: right;
   padding-top: 15px;
   padding-right: 50px; 
-    font-family: "";
+  font-family: 'Open Sans', sans-serif;
   color: #FFFFFF
   
 }
 
+
+h3{
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding-left: 10px;
+
+ 
+}
+
 p{
-    font-size: 22px;
-    font-family: "Cera GR";
-  color: #6C6C6C;
-  
-  
+  font-size: 22px;
+
+  color: white;
+
+  font-family: 'Open Sans', sans-serif;  
+}
+
+
+b{
+  font-size: 22px;
+
+  color: white;
+
+  font-family: 'Open Sans', sans-serif;
+
   
 }
 
@@ -33,6 +60,7 @@ p{
 body {
     margin: 0;
     height: 100vh;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .grid-container {
@@ -74,13 +102,15 @@ section.header2 {
 
 section.righttab {
     grid-area: righttab;
-    background-color: green;
+    background-color: rgb(53, 150, 230);
+    color: white;
   
 }
 
 section.lefttab {
     grid-area: lefttab;
-    background-color: lightcoral;
+    background-color: rgb(53, 150, 230);
+    color: white;
   
 }
 
@@ -92,13 +122,16 @@ section.footerleft {
 
 section.footermid {
     grid-area: footermid;
-    background-color: lightgreen;
+    background-color : lightblue;
   
 }
 
 section.footerright {
     grid-area: footerright;
-    background-color: lightgray;
+    background-color: lightblue;
+
+
+    
   
 }
 
@@ -125,7 +158,7 @@ section.footerright {
 }
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: rgb(255, 0, 34); /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -139,7 +172,7 @@ section.footerright {
 }
 
 .scondarybutton {
-  background-color: #4C50AF; /* Green */
+  background-color: rgb(97, 140, 204); /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
