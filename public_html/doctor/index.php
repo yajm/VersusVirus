@@ -24,11 +24,7 @@ if(isset($_POST['submit1'])){
 
   	$from = "info@consultnow.ch";
     $subject = "Weitere Informationen - ConsultNow";
-<<<<<<< HEAD
 	$message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Ihr Arzt empfiehlt Ihnen ein Spital aufzusuchen. Bitte halten Sie sich an allf&auml;llige Weisungen des Arztes und der Gesundheitskommission. <br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>Ihr ConsultNow Team</body></html>";
-=======
-	$message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Ihr Arzt empfiehlt Ihnen ein Spital aufzusuchen. Bitte halten Sie sich an allfällige Weisungen des Arztes und der Gesundheitskommission. <br><br>Wir wünschen Ihnen beste Gesundheit.<br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>Ihr ConsultNow Team</body></html>";
->>>>>>> 3031dceaf0f437d62ae8c0be31f795da57332d82
     $headers = "From: $from\r\n";
     $headers .= "Content-type: text/html\r\n";
     mail($to,$subject,$message,$headers);
@@ -52,11 +48,7 @@ if(isset($_POST['submit2'])){
 
   	$from = "info@consultnow.ch";
     $subject = "Weitere Informationen - ConsultNow";
-<<<<<<< HEAD
   	$message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Ihr Arzt empfiehlt Ihnen <b>NICHT</b> ein Spital aufzusuchen. Bitte halten Sie sich an allf&auml;llige Weisungen des Arztes und der Gesundheitskommission. <br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>Ihr ConsultNow Team</body></html>";
-=======
-  	$message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Ihr Arzt empfiehlt Ihnen <b>NICHT</b> ein Spital aufzusuchen. Bitte halten Sie sich an allfällige Weisungen des Arztes und der Gesundheitskommission. <br><br>Wir wünschen Ihnen beste Gesundheit.<br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>Ihr ConsultNow Team</body></html>";
->>>>>>> 3031dceaf0f437d62ae8c0be31f795da57332d82
     $headers = "From: $from\r\n";
     $headers .= "Content-type: text/html\r\n";
     mail($to,$subject,$message,$headers);
@@ -104,21 +96,6 @@ if(isset($_POST['submit2'])){
 		
 		<section class="righttab">
 			<h3>Messdaten</h3>
-<<<<<<< HEAD
-			 <?php
-				include '../../engine/connection.php';
-				$doctor_id = $_GET["id"];
-				$sql = mysqli_query($conn, "SELECT * FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 1");
-				$row = $sql->fetch_assoc();
-				echo "<b>" . $row['name'] . "</b><br><br>";
-				echo "Alter: " . $row['age'] . " Jahre<br>";
-				echo "Gewicht: " . $row['weight'] . " KG<br>";
-				echo "Temperatur: " . $row['temperature'] . " C<br>";
-				echo "Blutdruck: " . $row['bloodpressure'] . "<br>";
-				echo "O2-Wert: " . $row['otwo'] . "<br>";
-				echo "Atemgeschwindigkeit: " . $row['frequency'] . "<br>";
-			?>
-=======
 
 			<div style="padding-left: 10px; ">
 
@@ -139,7 +116,6 @@ if(isset($_POST['submit2'])){
 
 			</div>
 			
->>>>>>> 3031dceaf0f437d62ae8c0be31f795da57332d82
 		</section>
 		
 		<section class="footerleft">
