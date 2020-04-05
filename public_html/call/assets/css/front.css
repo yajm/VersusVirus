@@ -50,7 +50,7 @@ a {
 .pageCenter {
   margin: auto;
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 25%;
   width: 50%;
 }
@@ -127,6 +127,20 @@ a {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 64px;
+  cursor: pointer;
+}
+
+.try {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  width: 128px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
   border-radius: 64px;
   cursor: pointer;
 }
