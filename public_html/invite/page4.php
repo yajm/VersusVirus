@@ -11,16 +11,11 @@ if(isset($_POST['submit'])){
 
 <html>
 <head>
-   <title>Call Doctor</title>
+   <title>ConsultNow.ch</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="../call/assets/css/style.css">
 </head>
 
-<style>
-  .pageCenter {
-    transform: translate(-50%, -20%);
-  }
-</style>
 
 <body>
 <div class="parent">
@@ -29,17 +24,15 @@ if(isset($_POST['submit'])){
 </div>
 <div class="pageCenter" style="background-color:#FFFFFFE0; height = 80%">
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
-    <h1>Koerpertemperatur</h1>
-    <div>
-    <iframe width="420" height="315"
-src="https://www.youtube.com/embed/0-_CloDg0sA">
-</iframe> 
-</div>
+    <h1>Körpertemperatur</h1>
     	<form method="post" action="#">
-		 
+    	<br>
+		<br>
+		Bitte messen sie ihre Körpertemperatur mit einem Termometer.<br>
+		Falls Sie die Messungen nicht machen können, bitte einfach Felder leer lassen und senden klicken.
 		<br>
 		<br>
-		<input class="textfieldlong" type="text" name="data" id="data" value="" placeholder="Koerpertemperatur" />
+		<input class="textfieldlong" type="text" name="data" id="data" value="" placeholder="Körpertemperatur" />
 		<br>
 		<br>
 		<button class="button" type="submit" name="submit">Senden</button>

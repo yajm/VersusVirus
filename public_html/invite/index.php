@@ -6,16 +6,10 @@ if(isset($_POST['submit'])){
 
 <html>
 <head>
-   <title>Call Doctor</title>
+   <title>ConsultNow.ch</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="../call/assets/css/style.css">
 </head>
-
-<style>
-  .pageCenter {
-    transform: translate(-50%, -20%);
-  }
-</style>
 
 <body>
 <div class="parent">
@@ -24,15 +18,18 @@ if(isset($_POST['submit'])){
 </div>
 <div class="pageCenter" style="background-color:#FFFFFFE0; height = 80%">
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
-    <h1>Call a Doctor</h1>
-    	<form method="post" action="#">
-		
+    <h1>Willkommen bei ConsultNow.ch</h1>
+    	<form method="post" action="#">	
 		<br>
 		<br>
-		Willkommen, wir machen nun ein paar Messungen.
+		Wir referieren Sie an Spitäler, die eine erste persönliche, virtuelle Konsultation mit einem Arzt vereinbaren. Sie müssen sich nicht unnötigen Gefahren auf Ihrem Gang zum Spital aussetzen. Sitzen Sie bequem zu hause und lassen Sie sich in minutenschnelle verbinden. Schnell. Einfach. Sicher. 
+<br>
+    <br>
+Wie funktioniert ConsultNow?
+Damit die Ärzte eine möglichst genaue Aussage treffen können, werden einige Vitalparameter wie Temperatur, Puls benötigt. Bevor Sie mit einem Arzt in Verbindung tretten, leiten wir Sie durch einfache und sichere Methoden, um diese Kennzahlen zu messen. Das wars! Sie sind bereit für Ihre Konsultation.
 		<br>
 		<br>
-		<button class="button" type="submit" name="submit">Senden</button>
+		<button class="button" type="submit" name="submit">Zu den Messungen</button>
 	</form>
   </div>
 </div>

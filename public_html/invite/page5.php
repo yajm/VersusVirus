@@ -3,9 +3,9 @@ if(isset($_POST['submit'])){
 	include '../../engine/connection.php';
   	$data = $_POST['data'];
   	$code = $_GET["code"];
-  	$sql = mysqli_query($conn, "UPDATE patient SET otwo = '$data' WHERE invitelink='$code'");
+  	$sql = mysqli_query($conn, "UPDATE patient SET puls = '$data', WHERE invitelink='$code'");
 
-	header('Location: /invite/page3.php?code='. $code);
+	header('Location: /invite/page4.php?code='. $code);
 }
 ?>
 
@@ -17,7 +17,6 @@ if(isset($_POST['submit'])){
 </head>
 
 
-
 <body>
 <div class="parent">
 <div class="corona">
@@ -25,18 +24,18 @@ if(isset($_POST['submit'])){
 </div>
 <div class="pageCenter" style="background-color:#FFFFFFE0; height = 80%">
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
-    <h1>Sauerstoffsättigung im Blut</h1>
+    <h1>Pulsmessung</h1>
 <div class="container">
-<iframe src="//www.youtube.com/embed/xShZ4zVGYrQ" 
+<iframe src="//www.youtube.com/embed/ffmGIlgEA6k" 
 frameborder="0" allowfullscreen class="video"></iframe>
 </div>
     	<form method="post" action="#">
-		 <br>
+        <br>
     <br>
-     Falls Sie die Messungen nicht machen können, bitte einfach Felder leer lassen und senden klicken.
+		 Falls Sie die Messungen nicht machen können, bitte einfach Felder leer lassen und senden klicken.
 		<br>
 		<br>
-		<input class="textfield" type="text" name="data" id="data" value="" placeholder="Sauerstoffsättigung" />
+    <input class="textfield" type="text" name="data" id="data" value="" placeholder="Unterer Blutdruck" />
 		<br>
 		<br>
 		<button class="button" type="submit" name="submit">Senden</button>

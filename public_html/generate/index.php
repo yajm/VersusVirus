@@ -41,11 +41,6 @@ Ihr ConsultNow Team</body></html>";
   <link rel="stylesheet" type="text/css" href="../call/assets/css/style.css">
 </head>
 
-<style>
-  .pageCenter {
-    transform: translate(-50%, -20%);
-  }
-</style>
 
 <body>
 <?php

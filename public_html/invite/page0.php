@@ -26,12 +26,6 @@ function getName() {
   <link rel="stylesheet" type="text/css" href="../call/assets/css/style.css">
 </head>
 
-<style>
-  .pageCenter {
-    transform: translate(-50%, -20%);
-  }
-</style>
-
 <body>
 <div class="parent">
 <div class="corona">
