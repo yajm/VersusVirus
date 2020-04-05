@@ -76,13 +76,18 @@ if(isset($_POST['submit2'])){
 		</main>
 		
 		<section class="lefttab">
+
+		<div style="padding-left: 10px;">
+
+
 			<h3>Aktueller Videochat</h3>
-			 <?php
+			
+			<?php
 				include '../../engine/connection.php';
 				$doctor_id = $_GET["id"];
 				$sql = mysqli_query($conn, "SELECT name FROM patient p INNER JOIN invite_link i ON p.invitelink = i.code WHERE doctor_id = '$doctor_id' AND data_complete=1 AND assistant_check=1 AND status=0 LIMIT 20");
 				if ($row = $sql->fetch_assoc()) {
-					echo "<b>" . $row['name'] . "</b><br><br>";
+					echo "<b><center>" . $row['name'] . "</center></b><br><br>";
 				}
 				echo "<h3>Warteschlange</h3>";
 
@@ -90,6 +95,10 @@ if(isset($_POST['submit2'])){
 					echo $row['name'] . "<br>";
 				}
 			?>
+
+		</div> 
+
+			
 		</select> 
 		</section>
 		
