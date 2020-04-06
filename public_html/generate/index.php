@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
      
     $from = "info@consultnow.ch";
     $subject = "Invite Link - ConsultNow";
-    $message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Vielen Dank f&uuml;r Ihre Registration auf ConsultNow! <br><br>Sie sind fast mit Ihrem Arzt verbunden! Bitte klicken Sie auf den folgenden Link, um in minutenschnelle Ihre pers&ouml;nliche Konsultation anzutreten.<br><br><a href='https://student-uzh.ch/invite/?code=" . $code . "'>student-uzh.ch/invite/?code=" . $code . "</a><br><br>Alternativ k&ouml;nnen Sie direkt &uuml;ber unsere Webseite einloggen mit dem Code: " . $code . "<br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>
+    $message = "<html><body>Sehr geehrte/r " . $name . ",<br><br>Vielen Dank f&uuml;r Ihre Registration auf ConsultNow! <br><br>Sie sind fast mit Ihrem Arzt verbunden! Bitte klicken Sie auf den folgenden Link, um in minutenschnelle Ihre pers&ouml;nliche Konsultation anzutreten.<br><br><a href='https://consultnow.ch/invite/?code=" . $code . "'>consultnow.ch/invite/?code=" . $code . "</a><br><br>Alternativ k&ouml;nnen Sie direkt &uuml;ber unsere Webseite einloggen mit dem Code: " . $code . "<br><br>Wir w&uuml;nschen Ihnen beste Gesundheit.<br><br>Mit freundlichen Gr&uuml;ssen,<br>
 Ihr ConsultNow Team</body></html>";
     $headers = "From: $from\r\n";
     $headers .= "Content-type: text/html\r\n";

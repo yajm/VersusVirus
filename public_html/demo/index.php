@@ -57,7 +57,7 @@ Ihr ConsultNow Team</body></html>";
 </div>
 <div class="pageCenter" style="background-color:#FFFFFFE0; height = 80%">
   <div style="padding-left:50px; padding-right:50px; padding-top:50px; padding-bottom:50px">
-    <h1>Demo - For Patient</h1>
+    <h1>Demo - Patient</h1>
       <form method="post" action="#">
     <input class="textfield" type="text" name="name" id="name" value="" placeholder="Name" />
     <br>
